@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    container_name: architect-pg
+    build: .
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    depends_on:
+      - db
+  db:
+    image: "postgres:9.5"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=architect
+      - POSTGRES_PASSWORD=architect
+      - POSTGRES_USER=architect

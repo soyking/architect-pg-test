@@ -1,0 +1,4 @@
+Django==1.11.5
+psycopg2==2.7.1
+architect==0.5.6
+# https://github.com/soyking/architect/archive/create_table_if_not_exists.zip # use CREATE TABLE IF NOT EXISTS
